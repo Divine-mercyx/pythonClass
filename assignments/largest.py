@@ -1,6 +1,6 @@
 condition = True
-largest = 0
-smallest = 0
+largest = -2
+smallest = 1
 
 while condition:
     number = int(input("enter a number: "))
