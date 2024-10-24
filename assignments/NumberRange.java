@@ -1,0 +1,1 @@
+start = int(input("enter the start value: "))
