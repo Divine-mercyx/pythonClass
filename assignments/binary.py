@@ -1,4 +1,4 @@
-number = float(input("enter a number: "))
+number = int(input("enter a number: "))
 
 convert_binary = " "
 
