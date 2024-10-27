@@ -1,5 +1,4 @@
 number = int(input("enter a number: "))
-
 convert_binary = " "
 
 while number > 0:
