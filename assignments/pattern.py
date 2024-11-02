@@ -1,16 +1,20 @@
-count = 1
-countA = 1
-countB = 1
 
-while count <= 13:
-    while countA <= 7 - count:
+
+for count in range(1, 8):
+    for counting in range(1, 8 - count):
         print(" ", end = " ")
-        countA += 1
 
-    while countB <= count:
-        print(1, end = " ")
-        countB += 1
-        print()
-    
+    for counter in range(1, count):
+        print(counter, end = " ")
 
-    count += 1
+    for counter in range(1, count):
+        print(counter, end = " ")
+
+    print()
+
+for countB in range(6, 1):
+    for countingB in range(6, 1):
+        print(" ", end=" ")
+    for counterB in range(6, countB):
+        print(" ", end=" ")
+    print()
