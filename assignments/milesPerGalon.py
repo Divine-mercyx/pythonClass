@@ -1,7 +1,4 @@
-miles_driven = 0
-gallons = 0
 ultimate_miles = 0
-miles_per_galon = 0
 choice = 0
 while choice != -1:
     miles_driven = float(input("enter miles driven: "))

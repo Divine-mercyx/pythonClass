@@ -1,4 +1,4 @@
-print("Number \tSquare \tCube")
+ print("Number \tSquare \tCube")
 square = 0
 for count in range(0, 6):
     square = count ** 2
