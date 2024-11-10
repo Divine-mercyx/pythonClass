@@ -183,11 +183,40 @@ Settings\n\n
                 case 1:
                     print("Call settings\n\n1. Automatic redial\n2. Speed dialling\n3. Call waiting options\n4. Own number sending\n5. Phone line in use\n6. Automatic answer")
                     call_settings_choice = int(input(">>> "))
-                    match call
-                case 2: print("Phone settings")
-                case 3: print("Security settings")
+                    match call_settings_choice:
+                        case 1: print("Automatic redial")
+                        case 2: print("Speed dialling")
+                        case 3: print("Call waiting options")
+                        case 4: print("Own number sending")
+                        case 5: print("Phone line in use")
+                        case 6: print("Automatic answer")
+
+                case 2:
+                    print("Phone settings\n\n1. Language\n2. cell info display\n3. Welcome note\n4. network selection\n5. Lights\n6. confirm SIM service action")
+                    phone_settings_choice = int(input(">>> "))
+                    match phone_settings_choice:
+                        case 1: print("Language")
+                        case 2: print("cell info display")
+                        case 3: print("welcome note")
+                        case 4: print("network selection")
+                        case 5: print("Lights")
+                        case 6: print("confirm SIM service action") 
+                    
+                case 3: print("Security settings\n\n1. PIN code request\n2. call barring services\n3. fixed dialling\n4. closed user group\n5. phone security\n6. change access codes")
+
                 case 4: print("Restore factory settings")
                 case _: print("invalid input")
+
+
+        case 7: print("call divert")
+        case 8: print("Games")
+        case 9: print("Calculator")
+        case 10: print("Reminders")
+        case 11: print("Clock\n\n1. Alarm clock\n2. clock settings\n3. date settings\n4. stop watch\n5. countdown timer\n6. auto update of date and time")
+        case 12: print("Profiles")
+        case 13: print("SIM services")    
+
+
 nokia()
 
 
