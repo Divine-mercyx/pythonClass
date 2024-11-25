@@ -10,9 +10,7 @@ Main menu
 4. Checkout
 5. exit
     """)
-     
     print(f"you have {len(cart[0])} items")
-    
     response = int(input("> "))
     match response:
         case 1: view_products()
@@ -70,7 +68,6 @@ def remove_from_cart():
     if len(cart) == 2:
         cart[0].pop([0][response - 1])
         cart[1].pop([0][response - 1])
-        
         main_menu()
     else:
         print("no index")
