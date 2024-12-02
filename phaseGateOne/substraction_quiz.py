@@ -32,7 +32,6 @@ counter = 1
 score = 0
 
 start_time = datetime.datetime.now()
-print(start_time)
 while counter <= 10:
     first_number = random.randrange(100)
     second_number = random.randrange(100)
