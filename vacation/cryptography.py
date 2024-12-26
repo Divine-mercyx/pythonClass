@@ -13,7 +13,11 @@ def encrypt(message: str, key: int):
             number = index + key
             encrypted += alphabets2[number]
     return encrypted
-    
+
+def new_encrypt(message, key):
+    encrypted = ""
+
+
     
 def decrypt(encrypted, key):
     decrypted = ""
@@ -40,5 +44,6 @@ key = int(input("enter the key: "))
 
 alphabets = "abcdefghijklmnopqrstuvwxyz"
 alphabets2 = "ABCDEFIJKLMNOPQRSTUVWXYZ"
+print(encrypt(message, key))
 
 

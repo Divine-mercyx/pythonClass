@@ -1,17 +1,12 @@
 import random
 
 def get_password_generated():
-    letter = ["@", "x", "L", "%", "b", "Q", "y", "Z", "u", "A"]
-    numbers = ["6", "5", "8","9"]
+    letter = ["a", "b", "c", "B", "A", "z", "r", "R", "3", "4", "12", "#", "8", "t", "l"]
     password = ""
     for index in range(16):
-        number = str(random.randrange(100))
         if len(password) >= 16:
             break
-        password = str(number) + password
-        password = letter[index] + password
-        number =int(number)
-        password = str(number // 3) + password
+        password += random.choice(letter)
     return password
     
 
