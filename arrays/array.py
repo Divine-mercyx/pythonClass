@@ -30,9 +30,10 @@ class MyArray:
 
     def remove(self, index):
         self.data.pop(index)
+        self.size -= 1
 
 
-    def slice(self, start, end):
+    def substring(self, start, end):
         return self.data[start:end]
 
 
