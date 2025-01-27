@@ -9,7 +9,7 @@ class Stack:
         return len(self.data) == 0
 
 
-    def size(self):
+    def get_size(self):
         return self.size
 
 
@@ -24,5 +24,5 @@ class Stack:
 
 
     def push(self, value):
-        if self.size == len(self.data): self.data.append(value)
+        if self.size != len(self.data): self.data.append(value)
 
