@@ -13,12 +13,13 @@ class Map:
 
 
     def put(self, key, value):
-        self.keys.add(key)
-        self.values.append(value)
-        self.size += 1
+        if not self.keys.contains(key):
+            self.keys.add(key)
+            self.values.append(value)
+            self.size += 1
 
 
-    def size(self):
+    def get_size(self):
         return self.size
 
 

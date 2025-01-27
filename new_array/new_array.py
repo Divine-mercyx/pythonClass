@@ -2,6 +2,7 @@ class NewArray:
 
     def __init__(self, size):
         self.size = size
+        self.capacity = 0
         self.array = [None] * size
 
 
@@ -13,6 +14,8 @@ class NewArray:
         if not 0 <= key < len(self.array):
             raise IndexError("index out of bound error")
         self.array[key] = value
+        self.capacity += 1
+
 
     def __getitem__(self, key):
         if 0 <= key < self.size:
@@ -42,6 +45,9 @@ class NewArray:
             if self.array[i] != other.array[i]:
                 return False
         return True
+
+    def get_size(self):
+        return self.capacity
 
 
 
