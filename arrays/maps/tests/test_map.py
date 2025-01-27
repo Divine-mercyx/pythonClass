@@ -16,5 +16,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(map.get("1"), "i love java")
 
 
+    def test_if_map_contains_a_key(self):
+        map = Map()
+        self.assertFalse(map.contains_key("1"))
+        map.put("1", "i love java")
+        self.assertTrue(map.contains_key("1"))
+
+
 if __name__ == '__main__':
     unittest.main()

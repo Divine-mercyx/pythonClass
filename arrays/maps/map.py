@@ -30,8 +30,9 @@ class Map:
 
 
     def contains_key(self, key):
-        return key in self.keys
+        return self.keys.contains(key)
 
 
     def contains_value(self, value):
         return value in self.values
+
