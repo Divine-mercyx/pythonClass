@@ -74,7 +74,7 @@ class TestDairyClass(unittest.TestCase):
         dairy = Dairy("fullname", "pin")
         dairy.add_entry("title", "body")
         self.assertEqual(1, dairy.my_size())
-        dairy.deleteEntryById(1)
+        dairy.delete_entry_by_Id(1)
         self.assertEqual(0, dairy.my_size())
 
     def test_to_create_entry_and_delete_entry_with_invalid_id(self):

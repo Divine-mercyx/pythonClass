@@ -21,8 +21,6 @@ class TvSet:
     def turn_off(self):
         self.__is_on = False
 
-    def change_channel_up(self):
-        pass
 
     def increase_volume(self):
         if 10 > self.__volume >= 0 and self.__is_on and not self.__is_muted:

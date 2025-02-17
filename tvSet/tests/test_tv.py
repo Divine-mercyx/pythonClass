@@ -2,7 +2,6 @@ import unittest
 from tvSet.tv_set import *
 
 
-
 class TestMyTvSet(unittest.TestCase):
 
     def test_that_tv_class_exists(self):
@@ -122,7 +121,7 @@ class TestMyTvSet(unittest.TestCase):
         myTv = TvSet()
         myTv.turn_on()
         myTv.increase_volume()
-        myTv.increase_volume()
+        myTv.in crease_volume()
         myTv.mute()
         self.assertEqual(0, myTv.get_volume())
         myTv.un_mute()
@@ -145,7 +144,7 @@ class TestMyTvSet(unittest.TestCase):
 
     def test_that_channel_can_be_changed_upward(self):
         myTv = TvSet()
-        myTv.turn_on()
+        myTv.turn_on() 
         myTv.change_up()
         myTv.change_up()
         self.assertEqual(3, myTv.get_channel())
@@ -177,12 +176,6 @@ class TestMyTvSet(unittest.TestCase):
         myTv.turn_on()
         myTv.search_channel(56)
         self.assertEqual(1, myTv.get_channel())
-
-
-
-
-
-
 
 
 

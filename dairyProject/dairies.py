@@ -9,7 +9,7 @@ class Dairies:
     def add_dairy(self, fullname, pin):
         if fullname == "": raise ValueError("Full name cannot be empty")
         if pin == "": raise ValueError("Pin cannot be empty")
-        if fullname in self.dairies: raise AlreadyExistsException
+        if self.find_dairy_by_username(fullname): raise AlreadyExistsException("Dairy with fullname '{}' already exists".format(fullname))
         dairy = Dairy(fullname, pin)
         self.dairies.append(dairy)
 
