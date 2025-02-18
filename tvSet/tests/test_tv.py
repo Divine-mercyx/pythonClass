@@ -121,7 +121,7 @@ class TestMyTvSet(unittest.TestCase):
         myTv = TvSet()
         myTv.turn_on()
         myTv.increase_volume()
-        myTv.in crease_volume()
+        myTv.increase_volume()
         myTv.mute()
         self.assertEqual(0, myTv.get_volume())
         myTv.un_mute()

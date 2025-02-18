@@ -43,7 +43,7 @@ class TvSet:
             self.__is_muted = False
 
     def change_up(self):
-        if 50 > self.__volume >= 0 and self.__is_on:
+        if 50 > self.__channel >= 0 and self.__is_on:
             self.__channel += 1
 
     def get_channel(self):
@@ -51,7 +51,7 @@ class TvSet:
             return self.__channel
 
     def change_down(self):
-        if self.__is_on and 50 >= self.__volume > 1:
+        if self.__is_on and 50 >= self.__channel > 1:
             self.__channel -= 1
 
     def search_channel(self, channel):
