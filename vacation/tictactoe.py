@@ -1,71 +1,43 @@
-#divine's python tic tac toe
-
-def display_board():
-    print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |\n"
-    + "-------------" + "\n"
-    + "| " + board[3] + " | " + board[4] + " | " + board[5] + " |\n"
-    + "-------------" + "\n"
-    + "| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
-
-
-def player_moves():
-    count = 1
-    while count <= 9:
-        if count % 2 == 0:
-            add_player_token("X")
-
-            if check_if_won("X"):
-                print("player x won")
-                break
-
-            if check_if_full():
-                print("its a draw")
-                break
-
-        else:
-            add_player_token("O")
-
-            if check_if_won("O"):
-                print("player O won")
-                break
-
-            if check_if_full():
-                print("its a draw")
-                break
-        count += 1
+squares = [" "] * 9
+players = "XO"
+board = """
+  0   1   2
+  {0} | {1} | {2}
+ -----------
+3 {3} | {4} | {5} 5
+ -----------
+  {6} | {7} | {8}
+  6   7   8
+"""
+win_conditions = [
+    (0, 1, 2),
+    (3, 4, 5),
+    (6, 7, 8),
+    (0, 3, 6),
+    (1, 4, 7),
+    (2, 5, 8),
+    (0, 4, 8),
+    (2, 4, 6),
+]
 
 
-def add_player_token(token):
-    print("player " + token)
-    move = int(input("enter between 1 - 9: "))
-    if board[move - 1] != " ":
-        print("space already filled, try again.")
-        add_player_token(token)
-    board[move - 1] = token
-    display_board()
+def check_win(player):
+    for a, b, c in win_conditions:
+        if {squares[a], squares[b], squares[c]} == {player}:
+            return True
 
 
-def check_if_won(token):
-    if board[0] == token and board[1] == token and board[2] == token\
-            or board[3] == token and board[4] == token and board[5] == token\
-            or board[6] == token and board[7] == token and board[8] == token\
-            or board[0] == token and board[4] == token and board[8] == token\
-            or board[2] == token and board[4] == token and board[6] == token\
-            or board[0] == token and board[3] == token and board[6] == token\
-            or board[1] == token and board[4] == token and board[7] == token\
-            or board[2] == token and board[5] == token and board[8] == token:
-        return True
-
-
-def check_if_full():
-    counter = 0
-    for count in range(len(board)):
-        if board[count - 1] != " ":
-            counter += 1
-    if counter == 9:
-        return True
-
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
-display_board()
-player_moves()
+while True:
+    print(board.format(*squares))
+    if check_win(players[1]):
+        print(f"{players[1]} is the winner!")
+        break
+    if " " not in squares:
+        print("It' s a tie!")
+        break
+    square = input(f"{players[0]} choose your square [0-8] > ")
+    if not square.isdigit() or not 0 <= int(square) <= 8 or squares[int(square)] != " ":
+        print("Invalid move!")
+        continue
+    squares[int(square)] = players[0]
+    players = players[::-1]
