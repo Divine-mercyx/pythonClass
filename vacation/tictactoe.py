@@ -1,13 +1,13 @@
 squares = [" "] * 9
 players = "XO"
 board = """
-  0   1   2
+
   {0} | {1} | {2}
  -----------
-3 {3} | {4} | {5} 5
+  {3} | {4} | {5}
  -----------
   {6} | {7} | {8}
-  6   7   8
+  
 """
 win_conditions = [
     (0, 1, 2),
@@ -36,8 +36,8 @@ while True:
         print("It' s a tie!")
         break
     square = input(f"{players[0]} choose your square [0-8] > ")
-    if not square.isdigit() or not 0 <= int(square) <= 8 or squares[int(square)] != " ":
+    if not square.isdigit() or not 0 <= (int(square) - 1) <= 8 or squares[(int(square) - 1)] != " ":
         print("Invalid move!")
         continue
-    squares[int(square)] = players[0]
+    squares[(int(square) - 1)] = players[0]
     players = players[::-1]
