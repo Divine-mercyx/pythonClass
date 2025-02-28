@@ -15,7 +15,7 @@ class Player:
 
     def get_token(self):
         return self.__token
-    #
-    # def __str__(self):
-    #     return f"name: {self.__name}\ntoken: {self.__token}\n"
+
+    def __str__(self):
+        return f"name: {self.__name}\ntoken: {self.__token}\n"
 
